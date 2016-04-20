@@ -1,2 +1,4 @@
 ---
-# defaults file for satis
+additional_composer_global_packages: {}
+internal_composer_global_packages: {}
+satis_user: "satis"
