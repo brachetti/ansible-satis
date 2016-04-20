@@ -1,0 +1,8 @@
+---
+- name: install satis
+  composer:
+    command: "create-project"
+    arguments: "composer/satis --stability=dev --keep-vcs"
+    working_dir: "{{ satis_home }}/satis"
+  become: yes
+  become_user: "{{ satis_user }}"

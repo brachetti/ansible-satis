@@ -3,4 +3,5 @@ additional_composer_global_packages: []
 internal_composer_global_packages: []
 
 satis_user: "satis"
-satis_home: "/home/satis"
+satis_user_home: "/home/satis"
+satis_home: "{{satis_user_home}}/satis"
