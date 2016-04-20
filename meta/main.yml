@@ -1,6 +1,6 @@
 galaxy_info:
   author: Ronald Brachetti
-  description: 
+  description: Install satis using ansible
   company:
   
   # If the issue tracker for your role is not on github, uncomment the
