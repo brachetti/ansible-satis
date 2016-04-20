@@ -13,6 +13,6 @@ satis_repo_homepage: "http://localhost"
 satis_private_repos: {}
 satis_all_dependencies:
 - name: "phpunit/phpunit"
-  versions: ">=3.7.38"
+  versions: ">=5.3.2"
 satis_skip_dev: true
 
