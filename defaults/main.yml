@@ -1,4 +1,6 @@
 ---
-additional_composer_global_packages: {}
-internal_composer_global_packages: {}
+additional_composer_global_packages: []
+internal_composer_global_packages: []
+
 satis_user: "satis"
+satis_home: "/home/satis"
