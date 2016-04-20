@@ -1,6 +1,7 @@
 ---
 - name: check if satis is installed
-  stat: "{{ satis_installation}}"
+  stat: 
+    path: "{{ satis_installation}}"
   register: satis_installed
 
 - name: install satis
