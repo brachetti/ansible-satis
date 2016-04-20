@@ -23,6 +23,6 @@
    "archive": {
       "directory": "dist",
       "format": "zip",
-      "skip-dev": {{ satis_skip_dev }}
+      "skip-dev": {{ satis_skip_dev | to_json }}
    }
  }
