@@ -5,6 +5,7 @@
     dest: "{{ satis_config_file }}"
   become: yes
   become_user: "{{ satis_user }}"
+  register: satis_config_file
 
 - name: create build dir
   file:
@@ -17,4 +18,5 @@
   command: "{{ satis_installation }}/bin/satis build {{ satis_config_file }} {{ satis_build_dir }}"
   become: yes
   become_user: "{{ satis_user }}"
+  when: satis_config_file.changed == true
 
