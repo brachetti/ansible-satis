@@ -1,4 +1,8 @@
 ---
+- name: check if satis is installed
+  stat: "{{ satis_installation}}"
+  register: satis_installed
+
 - name: install satis
   composer:
     command: "create-project"
@@ -6,3 +10,5 @@
     working_dir: "{{ satis_installation }}"
   become: yes
   become_user: "{{ satis_user }}"
+  when: satis_installed.exists == false
+

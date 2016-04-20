@@ -5,3 +5,14 @@ internal_composer_global_packages: []
 satis_user: "satis"
 satis_user_home: "/home/satis"
 satis_installation: "{{satis_user_home}}/satis"
+satis_config_file: "{{ satis_user_home}}/satis.json"
+satis_build_dir: "/opt/satis"
+
+satis_repo_name: "satis repository"
+satis_repo_homepage: "http://localhost"
+satis_private_repos: {}
+satis_all_dependencies:
+- name: "phpunit/phpunit"
+  versions: ">=3.7.38"
+satis_skip_dev: true
+

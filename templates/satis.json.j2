@@ -1,0 +1,28 @@
+# {{ ansible_managed }}
+ {
+   "name": "sfp satis repository",
+   "homepage": "http://satis.infrastructure.sfp.intern",
+   "repositories": [
+      {
+         "type": "composer",
+         "url": "http://packagist.org"
+      }
+      {% for item in satis_private_repos %}
+      ,{
+          "type": "{{ item.type }}",
+          "url": "{{ item.url }}"
+      }
+      {% endfor %}
+   ],
+   "require": {
+      {% for item in satis_all_dependencies %}
+      "{{ item.name }}": "{{ item.versions }}",
+      {% endfor %}
+ },
+   "require-dependencies": true,
+   "archive": {
+      "directory": "dist",
+      "format": "zip",
+      "skip-dev": {{ satis_skip_dev }}
+   }
+ }
