@@ -1,0 +1,9 @@
+---
+- name: create satis user
+  user:
+    name: "{{ satis_user }}"
+    createhome: yes
+    home: "{{ satis_home }}"
+    state: present
+    shell: "/bin/bash"
+
