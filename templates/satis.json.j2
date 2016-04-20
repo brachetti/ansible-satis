@@ -1,18 +1,7 @@
  {
-   "name": "sfp satis repository",
-   "homepage": "http://satis.infrastructure.sfp.intern",
-   "repositories": [
-      {
-         "type": "composer",
-         "url": "https://packagist.org"
-      }
-      {% for item in satis_private_repos %}
-      ,{
-          "type": "{{ item.type }}",
-          "url": "{{ item.url }}"
-      }
-      {% endfor %}
-   ],
+   "name": "{{ satis_repo_name }}",
+   "homepage": "{{ satis_repo_homepage }}",
+   "repositories": {{ satis_repos | to_nice_json }},
    "require": {{ satis_all_dependencies | to_nice_json }},
    "require-dependencies": true,
    "archive": {
