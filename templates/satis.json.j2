@@ -15,9 +15,7 @@
       {% endfor %}
    ],
    "require": {
-      {% for item in satis_all_dependencies %}
-      "{{ item.name }}": "{{ item.versions }}",
-      {% endfor %}
+      {{ satis_all_dependencies | to_nice_json }}
  },
    "require-dependencies": true,
    "archive": {
