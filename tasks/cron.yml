@@ -1,0 +1,8 @@
+---
+- name: manage cron entry
+  cron:
+    name: satis-build
+    state: present
+    user: "{{ satis_user }}"
+    special_time: daily
+    job: "{{ satis_installation }}/bin/satis build {{ satis_config_file }} {{ satis_build_dir }}"
