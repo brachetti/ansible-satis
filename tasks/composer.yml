@@ -3,6 +3,6 @@
   composer:
     command: "create-project"
     arguments: "composer/satis --stability=dev --keep-vcs"
-    working_dir: "{{ satis_home }}/satis"
+    working_dir: "{{ satis_installation }}"
   become: yes
   become_user: "{{ satis_user }}"
