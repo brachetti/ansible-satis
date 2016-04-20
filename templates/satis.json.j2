@@ -14,9 +14,7 @@
       }
       {% endfor %}
    ],
-   "require": {
-      {{ satis_all_dependencies | to_nice_json }}
- },
+   "require": {{ satis_all_dependencies | to_nice_json }},
    "require-dependencies": true,
    "archive": {
       "directory": "dist",
