@@ -18,5 +18,5 @@
   command: "{{ satis_installation }}/bin/satis build {{ satis_config_file }} {{ satis_build_dir }}"
   become: yes
   become_user: "{{ satis_user }}"
-  when: satis_config_file.changed == true
+  when: satis_config_file.changed
 
