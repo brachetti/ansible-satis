@@ -12,3 +12,10 @@
   become_user: "{{ satis_user }}"
   when: satis_installed.stat.exists == false
 
+- name: configure composer to ignore ssl
+  composer:
+    command: "config"
+    arguments: "-g secure-http false"
+    working_dir: "{{ satis_user_home }}"
+  when: satis_composer_ignore_secure_http
+

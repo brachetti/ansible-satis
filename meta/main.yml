@@ -174,8 +174,12 @@ galaxy_info:
 
 dependencies:
 - role: geerlingguy.php
+  tags:
+  - php
 - role: geerlingguy.composer
   composer_global_packages: "{{ additional_composer_global_packages + internal_composer_global_packages  }}"
+  tags:
+  - composer
 - role: geerlingguy.nginx
   nginx_vhosts: "{{ satis_nginx_vhosts }}"
   nginx_remove_default_vhost: "{{ only_satis_in_nginx }}"
