@@ -176,4 +176,4 @@ dependencies:
 - role: geerlingguy.php
 - role: geerlingguy.composer
   composer_global_packages: "{{ additional_composer_global_packages + internal_composer_global_packages  }}"
-
+- role: geerlingguy.nginx
