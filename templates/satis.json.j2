@@ -1,6 +1,6 @@
  {
    "name": "{{ satis_repo_name }}",
-   "homepage": "{{ satis_repo_homepage }}",
+   "homepage": "{{ satis_repo_host }}",
    "repositories": {{ satis_repos | to_nice_json }},
    "require": {{ satis_all_dependencies | to_nice_json }},
    "require-dependencies": true,
@@ -8,5 +8,8 @@
       "directory": "dist",
       "format": "zip",
       "skip-dev": {{ satis_skip_dev | to_json }}
+   },
+   "config": {
+     "secure-http": {{ satis_force_https | default(true) | to_json }}
    }
  }

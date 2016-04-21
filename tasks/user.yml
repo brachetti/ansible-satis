@@ -6,4 +6,5 @@
     home: "{{ satis_user_home }}"
     state: present
     shell: "/bin/bash"
+    generate_ssh_key: yes
 

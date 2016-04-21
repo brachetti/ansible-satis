@@ -10,20 +10,19 @@ satis_build_dir: "/opt/satis"
 
 satis_repo_name: "satis repository"
 satis_repo_port: "80"
-satis_repo_host: "http//localhost"
-satis_repo_homepage: "{{ satis_repo_host }}:{{ satis_repo_port }}"
+satis_repo_host: "localhost"
 satis_repos: 
 - type: "composer"
   url: "https://packagist.org"
 satis_all_dependencies:
   phpunit/phpunit: ">=5.3.2"
 satis_skip_dev: true
+satis_force_https: true
 
 satis_nginx_vhosts:
 - listen: "{{ satis_repo_port }} default_server"
-  server_name: "{{ satis_repo_homepage }}"
+  server_name: "{{ satis_repo_host }}"
   root: "{{ satis_build_dir }}"
-  index: "index.html"
   
 only_satis_in_nginx: true
 
