@@ -7,7 +7,7 @@
   composer:
     command: "create-project"
     arguments: "composer/satis --stability=dev --keep-vcs"
-    working_dir: "{{ satis_installation }}"
+    working_dir: "{{ satis_user_home }}"
   become: yes
   become_user: "{{ satis_user }}"
   when: satis_installed.stat.exists == false
