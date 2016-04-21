@@ -8,8 +8,5 @@
       "directory": "dist",
       "format": "zip",
       "skip-dev": {{ satis_skip_dev | to_json }}
-   },
-   "config": {
-     "secure-http": {{ satis_force_https | default(true) | to_json }}
    }
  }
