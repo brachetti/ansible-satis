@@ -5,7 +5,7 @@
     dest: "{{ satis_config_file }}"
   become: yes
   become_user: "{{ satis_user }}"
-  register: satis_config_file
+  register: satis_config_file_created
 
 - name: create build dir
   file:
@@ -14,9 +14,13 @@
     state: directory
     mode: "0733"
 
+- name: count number of files in {{ satis_build_dir }}
+  find:
+    paths: "{{ satis_build_dir }}"
+  register: find_satis_build_dir
+
 - name: build the repository
   command: "{{ satis_installation }}/bin/satis build {{ satis_config_file }} {{ satis_build_dir }}"
   become: yes
   become_user: "{{ satis_user }}"
-  when: satis_config_file.changed
-
+  when: satis_config_file_created.changed == true || find_satis_build_dir.matched == 0
