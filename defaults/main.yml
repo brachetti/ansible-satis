@@ -10,7 +10,8 @@ satis_build_dir: "/opt/satis"
 
 satis_repo_name: "satis repository"
 satis_repo_port: "80"
-satis_repo_homepage: "http://localhost:{{ satis_repo_port }}"
+satis_repo_host: "http//localhost"
+satis_repo_homepage: "{{ satis_repo_host }}:{{ satis_repo_port }}"
 satis_repos: 
 - type: "composer"
   url: "https://packagist.org"
