@@ -1,6 +1,8 @@
 ---
 - include: user.yml
 - include: composer.yml
+  tags:
+  - composer
 - include: satis.yml
 - include: cron.yml
 

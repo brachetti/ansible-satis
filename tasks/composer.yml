@@ -18,4 +18,6 @@
     arguments: "-g secure-http false"
     working_dir: "{{ satis_user_home }}"
   when: satis_composer_ignore_secure_http
+  become: yes
+  become_user: "{{ satis_user }}"
 
