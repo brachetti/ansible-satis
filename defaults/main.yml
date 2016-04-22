@@ -19,6 +19,9 @@ satis_all_dependencies:
   phpunit/phpunit: ">=5.3.2"
 satis_skip_dev: true
 satis_composer_ignore_secure_http: false
+satis_require_all_versions: true
+satis_require_dependencies: true
+satis_require_dev_dependencies: false
 
 satis_nginx_vhosts:
 - listen: "{{ satis_repo_port }} default_server"

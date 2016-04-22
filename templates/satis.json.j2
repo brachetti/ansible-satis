@@ -3,7 +3,9 @@
    "homepage": "{{ satis_repo_homepage }}",
    "repositories": {{ satis_repos | to_nice_json }},
    "require": {{ satis_all_dependencies | to_nice_json }},
-   "require-dependencies": true,
+   "require-all": {{ satis_require_all_versions | to_json }},
+   "require-dependencies": {{ satis_require_dependencies | to_json }},
+   "require-dev-dependencies": {{ satis_require_dev_dependencies | to_json }},
    "archive": {
       "directory": "dist",
       "format": "zip",
