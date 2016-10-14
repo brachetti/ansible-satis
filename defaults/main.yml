@@ -7,6 +7,7 @@ satis_user_home: "/home/satis"
 satis_installation: "{{satis_user_home}}/satis"
 satis_config_file: "{{ satis_user_home}}/satis.json"
 satis_build_dir: "/opt/satis"
+satis_version: "alpha"
 
 satis_repo_name: "satis repository"
 satis_repo_port: "80"
